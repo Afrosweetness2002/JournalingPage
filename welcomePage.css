@@ -1,6 +1,10 @@
 .title {
-    background-color: grey;
+    background-color: blue;
 }
 .intro{
     color: white;
+}
+
+body {
+    background-color: blue;
 }
