@@ -11,8 +11,28 @@ function generateQuote() {
       return data.json();
     })
     .then(function (data) {
+      //   Array.from(document.querySelectorAll("#quote, #quote2")).forEach((x) => {
+      //     x.innerHTML = data.content;
+      //   });
       document.querySelector("#quote").innerHTML = data.content;
-      document.querySelector(".author, #author2").innerHTML = "- " + data.author;
+      //   Array.from(document.querySelectorAll(".author, #author2")).forEach(
+      //     (x) => {
+      //       x.innerHTML = "- " + data.author;
+      //     }
+      //   );
+      document.querySelector(".author").innerHTML = "- " + data.author;
+      // let authorArray = document.querySelectorAll(".author, #author2");
+      // for(let i = 0; i<authorArray.length; i ++){
+
+      // }
+    });
+  fetch(url)
+    .then(function (data) {
+        return data.json();
+    })
+    .then(function (data){
+        document.querySelector("#quote2").innerHTML = data.content;
+        document.querySelector(".author2").innerHTML = "- " + data.author;
     })
     .catch(function (err) {
       console.log(err);
